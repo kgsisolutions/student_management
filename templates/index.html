@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Management System</h1>
+    <p>FastAPI + MySQL CRUD Application</p>
+
+    <div class="form">
+
+        <input type="hidden" id="student_id">
+
+        <input type="text" id="name"
+               placeholder="Student Name">
+
+        <input type="email" id="email"
+               placeholder="Email Address">
+
+        <input type="number" id="marks"
+               placeholder="Marks (0-100)">
+
+        <button onclick="saveStudent()">
+            Save Student
+        </button>
+
+        <button onclick="clearForm()">
+            Clear
+        </button>
+
+    </div>
+
+    <h2>Student Records</h2>
+
+    <button onclick="loadStudents()">
+        Refresh Records
+    </button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Marks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentTable"></tbody>
+    </table>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
